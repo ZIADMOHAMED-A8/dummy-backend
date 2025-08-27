@@ -42,10 +42,11 @@ app.post("/auth/login", (req, res) => {
   if (!user) return res.status(401).json({ message: "Invalid credentials" });
 
   // حفظ session في كوكي
-  res.cookie("session_user", user.id, {
-    httpOnly: true,
-    sameSite: "lax",
-  });
+res.cookie("session_user", user.id, {
+  httpOnly: true,
+  sameSite: "none",  // عشان Vercel
+  secure: true       // عشان HTTPS
+});
 
   res.json({ message: "Login successful", user: { id: user.id, username: user.username, email: user.email } });
 });
@@ -96,5 +97,6 @@ app.post("/auth/signup", (req, res) => {
 
 // Run server
 app.listen(3500, () => console.log("✅ Server running on http://localhost:3500"));
+
 
 
