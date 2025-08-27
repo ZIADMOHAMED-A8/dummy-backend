@@ -9,8 +9,10 @@ app.use(cookieParser());
 // ✅ السماح بالـ cookies مع CORS
 app.use(
   cors({
-    origin: "http://localhost:5173", // React app
-    credentials: true,
+    origin: ["http://localhost:5173",
+     'https://exclusive-e-commerce-website-t64y.vercel.app/'
+    ],
+     credentials: true,
   })
 );
 
@@ -94,3 +96,4 @@ app.post("/auth/signup", (req, res) => {
 
 // Run server
 app.listen(3500, () => console.log("✅ Server running on http://localhost:3500"));
+
