@@ -10,7 +10,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: ["http://localhost:5173",
-     'https://exclusive-e-commerce-website-t64y.vercel.app/'
+     'https://exclusive-e-commerce-website-t64y.vercel.app'
     ],
      credentials: true,
   })
@@ -96,4 +96,5 @@ app.post("/auth/signup", (req, res) => {
 
 // Run server
 app.listen(3500, () => console.log("✅ Server running on http://localhost:3500"));
+
 
