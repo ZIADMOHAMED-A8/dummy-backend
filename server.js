@@ -21,7 +21,8 @@ const users = [
   { id: 1, username: "mohamed", password: "123456", email: "mohamed@test.com" },
   { id: 2, username: "ahmed", password: "abcdef", email: "ahmed@test.com" },
   {id:3,username:'ziad mohamed badry',password:'123456',email:'a7a@gmail.com'},
-  {id:4,username:'etoo',password:'etoo12345',email:'etoo@gmail.com'}
+  {id:4,username:'etoo',password:'etoo12345',email:'etoo@gmail.com'},
+  {id:5,username:'Buffon',password:'Buffon12345',email:'etoo@gmail.com'}
 ];
 
 // Middleware عشان نفك الكوكي
@@ -98,6 +99,7 @@ app.post("/auth/signup", (req, res) => {
 
 // Run server
 app.listen(3500, () => console.log("✅ Server running on http://localhost:3500"));
+
 
 
 
